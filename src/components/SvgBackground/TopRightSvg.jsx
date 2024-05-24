@@ -1,0 +1,51 @@
+import React from "react";
+
+function TopRightSvg() {
+  return (
+    <>
+      <svg
+        className='top-right'
+        width='219'
+        height='147'
+        viewBox='0 0 219 147'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <rect
+          opacity='0.18'
+          x='10.4252'
+          y='75.8326'
+          width='7.50168'
+          height='7.50168'
+          transform='rotate(110.283 10.4252 75.8326)'
+          fill='#686868'
+          stroke='white'
+          strokeWidth='1.22683'
+        />
+        <rect
+          opacity='0.18'
+          x='180.869'
+          y='138.825'
+          width='7.50168'
+          height='7.50168'
+          transform='rotate(110.283 180.869 138.825)'
+          fill='#686868'
+          stroke='white'
+          strokeWidth='1.22683'
+        />
+        <rect
+          x='69.4713'
+          y='-91.84'
+          width='180.485'
+          height='180.485'
+          transform='rotate(20.2832 69.4713 -91.84)'
+          stroke='white'
+          strokeOpacity='0.1'
+          strokeWidth='1.22683'
+        />
+      </svg>
+    </>
+  );
+}
+
+export default TopRightSvg;
