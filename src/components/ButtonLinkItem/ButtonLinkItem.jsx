@@ -1,12 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-function ButtonLinkItem({ href, className, label }) {
+
+function ButtonLinkItem({ to, className, label }) {
   return (
     <>
-      <a href={href} target='_blank' rel='noreferrer' className={className}>
+      <Link to ={to} className={className}>
         <button>{label}</button>
         <span className="spanLight"></span>
-      </a>
+      </Link>
     </>
   );
 }
