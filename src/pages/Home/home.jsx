@@ -4,12 +4,13 @@ import ButtonLink from "../../components/ButtonLink/ButtonLink";
 function Home() {
   return (
     <>
-      <div className='title'>
-        <p>Portfolio</p>
-        <p>Thomas</p>
-        <p>Bruand</p>
-      </div>
-
+      <main>
+          <h1>
+            <span>Portfolio</span>
+            <span>Thomas</span>
+            <span>Bruand</span>
+          </h1>
+      </main>
       <ButtonLink />
     </>
   );
