@@ -4,22 +4,22 @@ import ButtonLinkItem from "../ButtonLinkItem/ButtonLinkItem";
 function ButtonLink() {
   const buttonLinks = [
     {
-      href: "https://dribbble.com/shots/23181733-Blurry-Glassmorphic-Modern-Landing-page",
+      to: "about",
       className: "button first",
-      label: "À propos de moi",
+      label: "À propos",
     },
     {
-      href: "https://youtu.be/1pW_sk-2y40",
+      to: "stacks",
       className: "button second",
       label: "Stacks",
     },
     {
-      href: "https://x.com/juxtopposed",
+      to: "projects",
       className: "button third",
       label: "Projets",
     },
     {
-      href: "https://x.com/juxtopposed",
+      to: "contact",
       className: "button fourth",
       label: "Contact",
     },
@@ -29,7 +29,7 @@ function ButtonLink() {
       {buttonLinks.map((link, index) => (
         <ButtonLinkItem
           key={index}
-          href={link.href}
+          to={link.to}
           className={link.className}
           label={link.label}
         />
