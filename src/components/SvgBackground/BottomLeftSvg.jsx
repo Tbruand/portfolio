@@ -4,7 +4,7 @@ function BottomLeftSvg() {
   return (
     <>
       <svg
-        className='bottom-left'
+        className='bottomLeft'
         width='232'
         height='191'
         viewBox='0 0 232 191'

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from "react";
 
 function GridSvg() {
-    return (
-        <>
-        <div className='grid'>
+  return (
+    <>
+      <div className='grid'>
         <svg
-          className='grid-svg'
+          className='gridSvg'
           xmlns='http://www.w3.org/2000/svg'
           width='982'
           height='786'
@@ -34,9 +34,8 @@ function GridSvg() {
         </svg>
         <div className='blur'></div>
       </div>
-
-        </>
-    );
+    </>
+  );
 }
 
 export default GridSvg;

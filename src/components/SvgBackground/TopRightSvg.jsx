@@ -4,7 +4,7 @@ function TopRightSvg() {
   return (
     <>
       <svg
-        className='top-right'
+        className='topRight'
         width='219'
         height='147'
         viewBox='0 0 219 147'
