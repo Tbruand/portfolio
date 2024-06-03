@@ -11,14 +11,13 @@ function Stack() {
               <span>Stacks</span>
             </h2>
             <p>
-              En tant que développeur web passionné, j'utilise
-              une variété de technologies modernes pour créer des sites web et
-              applications performantes, esthétiques et fonctionnelles. Mes
-              stacks principales inclut des langages de programmation tels que
-              JavaScript, Python ainsi que des frameworks populaires
-              comme React et Django. Découvrez ci-dessous les
-              stacks technologiques que j'utilise pour transformer des idées en
-              réalités numériques.
+              En tant que développeur web passionné, j'utilise une variété de
+              technologies modernes pour créer des sites web et applications
+              performantes, esthétiques et fonctionnelles. Mes stacks
+              principales inclut des langages de programmation tels que
+              JavaScript, Python ainsi que des frameworks populaires comme React
+              et Django. Découvrez ci-dessous les stacks technologiques que
+              j'utilise pour transformer des idées en réalités numériques.
             </p>
           </div>
           <div className='window'>
@@ -26,7 +25,7 @@ function Stack() {
               <ul className='gridStack'>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -40,12 +39,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>jh3yy</div>
+                    <div className='itemText'>jh3yy</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -59,12 +58,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Creative</div>
+                    <div className='itemText'>Creative</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -78,12 +77,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Performant</div>
+                    <div className='itemText'>Performant</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -97,12 +96,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Bookmark</div>
+                    <div className='itemText'>Bookmark</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -116,12 +115,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Share</div>
+                    <div className='itemText'>Share</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -135,12 +134,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>CSS!</div>
+                    <div className='itemText'>CSS!</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -154,12 +153,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Responsive</div>
+                    <div className='itemText'>Responsive</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -174,12 +173,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Profit</div>
+                    <div className='itemText'>Profit</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -189,12 +188,12 @@ function Stack() {
                         <path d='m11.645 20.91-.007-.003-.022-.012a15.247 15.247 0 0 1-.383-.218 25.18 25.18 0 0 1-4.244-3.17C4.688 15.36 2.25 12.174 2.25 8.25 2.25 5.322 4.714 3 7.688 3A5.5 5.5 0 0 1 12 5.052 5.5 5.5 0 0 1 16.313 3c2.973 0 5.437 2.322 5.437 5.25 0 3.925-2.438 7.111-4.739 9.256a25.175 25.175 0 0 1-4.244 3.17 15.247 15.247 0 0 1-.383.219l-.022.012-.007.004-.003.001a.752.752 0 0 1-.704 0l-.003-.001Z' />
                       </svg>
                     </div>
-                    <div className='item__text'>Like</div>
+                    <div className='itemText'>Like</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -208,12 +207,12 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Hover</div>
+                    <div className='itemText'>Hover</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -223,12 +222,12 @@ function Stack() {
                         <path d='M9.375 3a1.875 1.875 0 0 0 0 3.75h1.875v4.5H3.375A1.875 1.875 0 0 1 1.5 9.375v-.75c0-1.036.84-1.875 1.875-1.875h3.193A3.375 3.375 0 0 1 12 2.753a3.375 3.375 0 0 1 5.432 3.997h3.943c1.035 0 1.875.84 1.875 1.875v.75c0 1.036-.84 1.875-1.875 1.875H12.75v-4.5h1.875a1.875 1.875 0 1 0-1.875-1.875V6.75h-1.5V4.875C11.25 3.839 10.41 3 9.375 3ZM11.25 12.75H3v6.75a2.25 2.25 0 0 0 2.25 2.25h6v-9ZM12.75 12.75v9h6.75a2.25 2.25 0 0 0 2.25-2.25v-6.75h-9Z' />
                       </svg>
                     </div>
-                    <div className='item__text'>Gift</div>
+                    <div className='itemText'>Gift</div>
                   </div>
                 </li>
                 <li>
                   <div className='item'>
-                    <div className='item__icon'>
+                    <div className='itemIcon'>
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         viewBox='0 0 24 24'
@@ -243,7 +242,7 @@ function Stack() {
                         />
                       </svg>
                     </div>
-                    <div className='item__text'>Configurable</div>
+                    <div className='itemText'>Configurable</div>
                   </div>
                 </li>
               </ul>
