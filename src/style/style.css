@@ -1,9 +1,13 @@
 @import url('https://fonts.googleapis.com/css?family=Manrope:700|Manrope:400');
 :root {
+    /* config stacks */
+    --speed: 10s;
+    --transition: 0.2s;
+    /* dark mode */
     --text: hsl(0, 0%, 99%);
     --textDim: hsl(0, 0%, 60%);
     --background: hsl(0, 0%, 7%);
-    --primary: hsl(155, 100%, 65%);
+    --darkPrimary: hsl(155, 100%, 65%);
     --primaryBg: hsla(155, 100%, 65%, 1%);
     --primaryHi: hsla(155, 100%, 75%, 25%);
     --primaryFg: hsl(155, 100%, 85%);
@@ -14,9 +18,11 @@
     --accent: hsl(155, 100%, 94%);
     --accentBg: hsla(155, 100%, 94%, 0.01);
     --accentHi: hsla(155, 100%, 100%, 25%);
-    --failure: hsl(0, 100%, 65%);;
-    --speed: 10s;
-    --transition: 0.2s;
+    --failure: hsl(0, 100%, 65%);
+    /* light mode */
+    --lightPrimary: hsl(227, 64%, 42%);
+    --lightPrimaryHover: hsl(229, 71%, 44%);
+   
 }
 *,
 *:after,
@@ -26,8 +32,8 @@
 body {
     font-family: 'Manrope';
     font-weight: 400;
-    background-color: var(--background);
-    color: var(--text);
+    background-color: var(--text);
+    color: var(--background);
     padding: 0 10%;
     height: 100vh;
     overflow: hidden;    
@@ -56,20 +62,20 @@ nav ul {
     list-style: none;
 }
 .navLi, .siteName {   
-    color: var(--textDim);
+    color: var(--background);
     text-decoration: none;
 }
 .navLi:hover {
-    color: var(--text);
     cursor: pointer;
 }
 .siteName {
     font-weight: bold;
 }
-.materialIcons {
+/* burger */
+/* .materialIcons {
     display: none;
     fill: var(--text);
-}
+} */
 /* fin nav */
 /* svg grid */
 .grid {
@@ -89,15 +95,6 @@ nav ul {
     width: 80%;
     position: relative;
     z-index: 1;
-}
-.blur {
-    height: 12rem;
-    width: 12rem;
-    background-color: var(--primary);
-    filter: blur(100px);
-    border-radius: 100px;
-    z-index: 0;
-    position: absolute;
 }
 /* fin svg grid */
 /* home + error404 */
@@ -127,14 +124,14 @@ h1 > span:nth-child(1){
     align-self: flex-start;
 }
 h1 > span:nth-child(2){
-    color: var(--primary);
+    color: var(--lightPrimary);
     align-self: flex-end;
 }
 h1 > span:nth-child(3){
     align-self: flex-end;
 }
 .errorPage > p:nth-child(2){
-    color: var(--primary);
+    color: var(--lightPrimary);
     align-self: center;
 }
 .errorBtn {
@@ -170,9 +167,8 @@ button{
     width: 160px;
     border: none;
     border-radius: 13px;
-    background-color: var(--primaryBg);
-    box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
-    color: var(--primaryFg);
+    background-color: var(--lightPrimary);
+    color: var(--text);
     font-family: "Manrope";
     font-size: 1rem;
     display: flex;
@@ -181,16 +177,6 @@ button{
     align-items: center;
     position: absolute;
     transform: translateY(0px);
-    transition: all 0.2s ease;
-}
-.spanLight {
-    width: 100px;
-    height: 60px;
-    background-color: var(--primaryHi);
-    border-radius: 100%;
-    filter: blur(20px);
-    position: absolute;
-    bottom: -50%;
     transition: all 0.2s ease;
 }
 .button:hover > span,.errorBtn:hover > span {
@@ -207,37 +193,13 @@ button{
     top: 21%;
     right: 20%;
 }
-.second > button {
-    background-color: var(--accentBg);
-    box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
-    color: var(--accentFg);
-}
-.second > span {
-    background-color: var(--accentHi);
-}
 .third {
     bottom: 20%;
     left: 17%;
 }
-.third > button {
-    background-color: var(--accentBg);
-    box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
-    color: var(--accentFg);
-}
-.third > span {
-    background-color: var(--accentHi);    
-}
 .fourth {
     bottom: 10%;
     right: 11%;
-}
-.fourth > button {
-    background-color: var(--secondaryBg); 
-    box-shadow: 0px -3px 15px 0px var(--secondary) inset;      
-    color: var(--secondaryFg);
-}
-.fourth > span {
-    background-color: var(--secondaryHi);
 }
 /* fin home + error404 */
 /* svg background */
@@ -303,7 +265,7 @@ h2 {
     font-size: 3rem;
     margin: 0;
     grid-column: 1 / -1;
-    color: var(--primary);
+    color: var(--darkPrimary);
     align-self: flex-start;
 }  
 .header {
@@ -389,7 +351,7 @@ h2 {
 }
 .itemIcon {
     width: 24px;
-    color: var(--primary);
+    color: var(--darkPrimary);
 }
 .itemText {
     flex: 1;
@@ -506,7 +468,7 @@ h2 {
     margin: 0;
     border-radius: 100%;    
     box-sizing: border-box;
-    border: 1px solid var(--primary) !important;     
+    border: 1px solid var(--darkPrimary) !important;     
     background-color: var(--primaryHi) !important; 
 }
 .dotUl li {
@@ -525,7 +487,7 @@ h2 {
 }
 @keyframes pulse {
 	0% {
-		box-shadow: 0 0 0 0 var(--primary);
+		box-shadow: 0 0 0 0 var(--darkPrimary);
 	}
 
 	70% {
@@ -583,7 +545,7 @@ input:required, textarea:required {
 /* Hide success/failure message
     (especially since the php is missing) */
 #success {
-    color: var(--primary); 
+    color: var(--darkPrimary); 
     display:none;  
 }
 #failure {
@@ -655,7 +617,7 @@ input:required, textarea:required {
     .blur {
         height: 8rem;
         width: 8rem;
-        background-color: var(--primary);
+        background-color: var(--darkPrimary);
         filter: blur(100px);
         border-radius: 100px;
         z-index: 0;
@@ -743,8 +705,59 @@ input:required, textarea:required {
 /* fin responsive */
 /* color + theme */
 
+:root:has(#theme:checked) body {
+    background-color: var(--background);
+    color: var(--text);
+}
+:root:has(#theme:checked) .navLi, .siteName {
+    color: var(--textDim);
+}
+:root:has(#theme:checked) .navLi:hover {
+    color: var(--text);
+}
+:root:has(#theme:checked) .blur {
+    background-color: var(--darkPrimary);
+    filter: blur(100px);
+    height: 12rem;
+    width: 12rem;  
+    border-radius: 100px;
+    z-index: 0;
+    position: absolute;
+}
+:root:has(#theme:checked) :is(h1 > span:nth-child(2), .errorPage > p:nth-child(2)){
+    color: var(--darkPrimary);
+} 
+:root:has(#theme:checked) button {
+    background-color: var(--primaryBg);
+    box-shadow: 0px -3px 15px 0px var(--primaryHi) inset;
+    color: var(--primaryFg);
+}
+:root:has(#theme:checked) .spanLight {
+    width: 100px;
+    height: 60px;
+    background-color: var(--primaryHi);
+    border-radius: 100%;
+    filter: blur(20px);
+    position: absolute;
+    bottom: -50%;
+    transition: all 0.2s ease;
+}
+:root:has(#theme:checked) :is(.second > button, .third > button){
+    background-color: var(--accentBg);
+    box-shadow: 0px -3px 15px 0px var(--accentHi) inset;
+    color: var(--accentFg);
+}
+:root:has(#theme:checked) .fourth > button {
+    background-color: var(--secondaryBg); 
+    box-shadow: 0px -3px 15px 0px var(--secondary) inset;      
+    color: var(--secondaryFg);
+}
+:root:has(#theme:checked) :is(.third > span,.second > span) {
+    background-color: var(--accentHi);    
+}
+
 /* :root:has(#theme:checked) :is(body, .controls, .item) {
 }
-:root:has(#theme:checked) h1 > span:nth-child(2), .errorPage > p:nth-child(2){
-   
-} */
+*/
+
+
