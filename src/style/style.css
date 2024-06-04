@@ -12,7 +12,7 @@
     --secondaryBg: hsla(156, 51%, 14%, 5%);
     --secondaryHi: hsla(156, 51%, 30%, 50%);
     --accent: hsl(155, 100%, 94%);
-    --accentBg: hsla(155, 100%, 94%, 1%);
+    --accentBg: hsla(155, 100%, 94%, 0.01);
     --accentHi: hsla(155, 100%, 100%, 25%);
     --failure: hsl(0, 100%, 65%);;
     --speed: 10s;
@@ -43,6 +43,7 @@ main {
 nav { 
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
     z-index: 9999;
 }
@@ -539,9 +540,11 @@ h2 {
 #contactForm {
     width: 60%;
     height: 530px;
-    background-color: var(--primaryBg);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);   
     padding: 10px 20px 30px 20px;
-    border-radius:7px;
 }
 #contactForm input,   
 #contactForm textarea { 
@@ -568,9 +571,14 @@ input:required, textarea:required {
     -webkit-box-shadow: none;  
     -o-box-shadow: none;  
 } 
+#contactForm label {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
 #contactForm .required {  
     font-weight: bold;  
-    color: var(--text);      
+    color: var(--text);         
 } 
 /* Hide success/failure message
     (especially since the php is missing) */
@@ -664,7 +672,7 @@ input:required, textarea:required {
         grid-template: auto 1fr / 1fr;
     }
     h2 {
-        font-size: 2.25rem;
+        font-size: 2rem;
         display: flex;
         flex-wrap: wrap;
     }   
@@ -715,60 +723,28 @@ input:required, textarea:required {
         bottom: 0;
         font-size: 0.8rem;
         border-radius: 0;
-    }  
-}
-/* fin responsive */
- /* Make form look nice on smaller screens */
-@media only screen and (max-width: 580px) {
+    }
     #contactForm{
-       margin-right: 3%;
-       width: 88%;
-       margin-left: 0;
-       padding-left: 3%;
-       padding-right: 3%;
+        width: 88%;
+        top: 60%;
+        padding-left: 3%;
+        padding-right: 3%;
+     } 
+    #contactForm input,   
+    #contactForm textarea { 
+        margin-bottom: 10px; 
+    } 
+    .submit{
+        position: relative;
+        width: 100%;
+        border-radius: 4px;
     }
 }
+/* fin responsive */
+/* color + theme */
 
-
-
-
- /* Theme */
-  /* :root:has(#theme:checked) :is(body, .controls, .item) {
-      background-color: hsl(0 0% 10%);
-      color: hsl(0 0% 100%);
-      border-color: hsl(0 0% 25%);
-  }
-  :root:has(#theme:checked) article {
-      background-color: hsl(0 0% 10%);
-      color: hsl(0 0% 100%);
-      border-color: hsl(0 0% 25%);
-      box-shadow: 0 10px 20px -5px hsl(0 0% 0% / 0.5);
-  }
-  :root:has(#theme:checked) .item {
-      background-color: black;
-  }
-  :root:has(#theme:checked) li::before {
-      background-color: black;
-  }
-   */
-    /* [for=theme] {
-      width: 48px;
-      aspect-ratio: 1;
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      display: grid;
-      place-items: center;
-  }
-  
-  [for=theme] svg {
-      width: 75%;
-  }
-  
-  #theme + svg path:first-of-type,
-  #theme:checked + svg path:last-of-type {
-      opacity: 0;
-  }
-  #theme:checked + svg path:first-of-type {
-      opacity: 1;
-  } */
+/* :root:has(#theme:checked) :is(body, .controls, .item) {
+}
+:root:has(#theme:checked) h1 > span:nth-child(2), .errorPage > p:nth-child(2){
+   
+} */
