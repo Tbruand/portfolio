@@ -76,8 +76,8 @@ function Contact() {
                 ></textarea>
               </label>
             </div>
-            <div className='button'>
-              <button name='submit' type='submit' id='submit'>
+            <div className='button submit'>
+              <button name='submit' type='submit' className="submit" id='submit'>
                 SEND
               </button>
               <span className='spanLight'></span>
