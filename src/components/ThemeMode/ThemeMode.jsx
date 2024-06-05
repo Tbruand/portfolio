@@ -1,12 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { SVG } from "@svgdotjs/svg.js";
 import "./style.css";
 
 function ThemeMode() {
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    // Lire le mode sombre du localStorage lors de l'initialisation
+    return localStorage.getItem('darkMode') === 'true';
+  });
+
   useEffect(() => {
-    const randomSlideToggle = document.getElementById(
-      "theme"
-    );
+    const randomSlideToggle = document.getElementById("theme");
 
     const randomSlide = {
       element: randomSlideToggle,
@@ -15,8 +18,34 @@ function ThemeMode() {
       duration: 150,
       random: true,
     };
-    new SvgToggleEffect(randomSlide);
-  });
+
+    const svgEffect = new SvgToggleEffect(randomSlide);
+
+    if (isDarkMode) {
+      svgEffect.animateNodes(false, randomSlide.duration, randomSlide.offset);
+    } else {
+      svgEffect.animateNodes(true, randomSlide.duration, randomSlide.offset);
+    }
+
+    // S'assurer que le bouton est dans le bon état
+    randomSlideToggle.checked = isDarkMode;
+
+  }, []); // Empty dependency array ensures this runs only once on mount
+
+  useEffect(() => {
+    const themeCheckbox = document.getElementById("theme");
+    if (isDarkMode) {
+      themeCheckbox.checked = true;
+      localStorage.setItem('darkMode', 'true');
+    } else {
+      themeCheckbox.checked = false;
+      localStorage.setItem('darkMode', 'false');
+    }
+  }, [isDarkMode]);
+
+  const handleThemeChange = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
   class SvgToggleEffect {
     constructor(effect) {
@@ -34,9 +63,11 @@ function ThemeMode() {
 
       effect.element.addEventListener("change", () => {
         if (effect.element.checked) {
-          effect.handler(this.nodes, false, effect.duration, effect.offset);
+          this.animateNodes(false, effect.duration, effect.offset);
+          setIsDarkMode(true);
         } else {
-          effect.handler(this.nodes, true, effect.duration, effect.offset);
+          this.animateNodes(true, effect.duration, effect.offset);
+          setIsDarkMode(false);
         }
       });
     }
@@ -46,6 +77,18 @@ function ThemeMode() {
         const j = Math.floor(Math.random() * (i + 1));
         [array[i], array[j]] = [array[j], array[i]];
       }
+    }
+
+    animateNodes(reverse, duration, offset) {
+      this.nodes.forEach((node, index) => {
+        setTimeout(() => {
+          if (reverse) {
+            node.animate({ duration: duration }).transform({ translate: 0 });
+          } else {
+            node.animate({ duration: duration }).transform({ translate: 28 });
+          }
+        }, index * offset);
+      });
     }
   }
 
@@ -65,10 +108,17 @@ function ThemeMode() {
       }, index * offset);
     });
   };
+
   return (
     <>
       <div className='input-container'>
-        <input id='theme' type='checkbox' value='1' />
+        <input
+          id='theme'
+          type='checkbox'
+          checked={isDarkMode}
+          value='1'
+          onChange={handleThemeChange}
+        />
         <label
           id='random-slide-toggle-label'
           htmlFor='theme'

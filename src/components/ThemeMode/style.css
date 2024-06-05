@@ -1,54 +1,56 @@
 :root {
-    --text: hsl(0, 0%, 99%);
-    --textDim: hsl(0, 0%, 60%);
-    --background: hsl(0, 0%, 7%);
-    --primary: hsl(155, 100%, 65%);
-    --primaryBg: hsla(155, 100%, 65%, 1%);
-    --primaryHi: hsla(155, 100%, 75%, 25%);
-    --primaryFg: hsl(155, 100%, 85%);
-    --secondary: hsl(156, 51%, 14%);
-    --secondaryFg: hsl(156, 51%, 75%);
-    --secondaryBg: hsla(156, 51%, 14%, 5%);
-    --secondaryHi: hsla(156, 51%, 30%, 50%);
-    --accent: hsl(155, 100%, 94%);
-    --accentBg: hsla(155, 100%, 94%, 1%);
-    --accentHi: hsla(155, 100%, 100%, 25%);
-    --failure: hsl(0, 100%, 65%);;
+  /* dark mode */
+  --text: hsl(0, 0%, 99%);
+  --textDim: hsl(0, 0%, 60%);
+  --background: hsl(0, 0%, 7%);
+  --darkPrimary: hsl(155, 100%, 65%);
+  --primaryBg: hsla(155, 100%, 65%, 1%);
+  --primaryHi: hsla(155, 100%, 75%, 25%);
+  --primaryFg: hsl(155, 100%, 85%);
+  --secondary: hsl(156, 51%, 14%);
+  --secondaryFg: hsl(156, 51%, 75%);
+  --secondaryBg: hsla(156, 51%, 14%, 5%);
+  --secondaryHi: hsla(156, 51%, 30%, 50%);
+  --accent: hsl(155, 100%, 94%);
+  --accentBg: hsla(155, 100%, 94%, 0.01);
+  --accentHi: hsla(155, 100%, 100%, 25%);
+  --failure: hsl(0, 100%, 65%);
+  /* light mode */
+  --lightPrimary: hsl(227, 64%, 42%);
+  --lightPrimaryHi: hsla(227, 64%, 42%, 25%);
+  --lightPrimaryHover: hsl(229, 71%, 44%);
 }
 .input-container {
-    height: auto;
+  height: auto;
 }  
 .control-label {
-    background-color: var(--background);
-    border: 2px solid var(--textDim);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    width: 56px;
-    height: 26px;
+  background-color: var(--text);
+  border: 2px solid var(--lightPrimary);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  width: 56px;
+  height: 26px;
+}  
+input[type="checkbox"] {
+  opacity: 0;
+  position: absolute;
+}  
+input[type="checkbox"]:checked + label {
+  border-color: var(--darkPrimary);
+}  
+input[type="checkbox"]:checked + label .switchSvg rect {
+  fill: var(--darkPrimary);
+}  
+.switchSvg rect {
+  fill: var(--lightPrimaryHi);
+  transition: fill 300ms ease-in-out;
+}  
+.switchSvg .reference rect {
+  opacity: 0;
 }
-  
-  input[type="checkbox"] {
-    opacity: 0;
-    position: absolute;
-  }
-  
-  input[type="checkbox"]:checked + label {
-    border-color: var(--primary);
-  }
-  
-  input[type="checkbox"]:checked + label .switchSvg rect {
-    fill: var(--primary);
-  }
-  
- 
-  
-  .switchSvg rect {
-    fill: var(--textDim);
-    transition: fill 300ms ease-in-out;
-  }
-  
-  .switchSvg .reference rect {
-    opacity: 0;
-  }
+:root:has(#theme:checked) .control-label {
+  background-color: var(--background);
+  border: 2px solid var(--secondaryFg);
+}  
   
