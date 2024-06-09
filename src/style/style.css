@@ -48,14 +48,14 @@ main {
     align-items: center;
 } 
 /* nav */
-nav { 
+header { 
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    z-index: 9999;
+    z-index: 200;
 }
-nav ul {
+header nav ul {
     display: flex;
     flex-direction: row;  
     align-items: center;
@@ -77,10 +77,6 @@ nav ul {
     fill: var(--lightPrimary);
 }
 /* burger */
-/* .materialIcons {
-    display: none;
-    fill: var(--text);
-} */
 /* fin nav */
 /* svg grid */
 .grid {
@@ -152,7 +148,7 @@ h1 > span:nth-child(3){
     color: inherit;
     height: 50px;
     width: 160px;
-    z-index: 9999;
+    z-index: 200;
     transform: translateY(25px);
     transition: all 0.2s ease;
 }
@@ -166,7 +162,7 @@ h1 > span:nth-child(3){
     color: inherit;
     height: 50px;
     width: 160px;
-    z-index: 9999;
+    z-index: 200;
 }
 button{
     height: 50px;
@@ -589,7 +585,7 @@ input:required, textarea:required {
     border-radius: 4px !important;
     height: 50px;
     width: 160px;
-    z-index: 9999;
+    z-index: 200;
 }
 .socialLink{
     margin: 0;
@@ -620,19 +616,15 @@ input:required, textarea:required {
     h1 > span {
       line-height: 5rem;
       letter-spacing: -0.3rem;
-    }  
-    nav ul li > :not(.siteName, .materialIcons) {
-      display: none;
-    }    
-    nav {
+    }         
+    header {
       display: flex;
       align-items: center;
       justify-content: space-between;
-    }  
-    .materialIcons {
-      display: flex;
-      align-items: center;
-    }
+    }     
+    header nav ul {
+        display: none;
+    } 
     .carouselContainer {
         width: 80%;
     }
