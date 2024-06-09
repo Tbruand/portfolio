@@ -3,24 +3,21 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
 const projects = [
   {
-    title: "Projet 1",
+    title: "Kasa",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    imageUrl: "https://cdn.mos.cms.futurecdn.net/dP3N4qnEZ4tCTCLq59iysd.jpg",
+      "Application web de location immobilière avec React.",
+    imageUrl: "/assets/img/responsive_kasa.png",
+    link: "https://github.com/BruandT/P_Kasa.git",
   },
   {
-    title: "Projet 2",
+    title: "Dofus Match",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    imageUrl: "https://wharferj.files.wordpress.com/2015/11/bio_north.jpg",
-  },
-  {
-    title: "Projet 3",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempore fuga voluptatum, iure corporis inventore praesentium nisi. Id laboriosam ipsam enim.",
-    imageUrl: "https://images7.alphacoders.com/878/878663.jpg",
+      "Application web de jeu de mémoire.",
+    imageUrl: "/assets/img/dofus_match.png",
+    link: "https://github.com/BruandT/dofus-match.git",
   },
 ];
 
@@ -80,8 +77,9 @@ function Carousel() {
                 className='carouselImage'
               />
               <div className='carouselContent'>
-                <h3>{project.title}</h3>
+                <h3 className="textColor">{project.title}</h3>
                 <p>{project.description}</p>
+                <a className="textColor" target="_blank" rel="noreferrer" href={project.link}>Info +</a>
               </div>
             </div>
           ))}
