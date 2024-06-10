@@ -29,7 +29,7 @@ function About() {
               <span className='textColor'>OpenClassrooms</span>, plateforme de
               formation en ligne, ce qui m'a permis d'apprendre différents{" "}
               <span className='textColor'>langages du web</span> et leur
-              utilisation à travers différents cas pratiques.(voir Projets)
+              utilisation à travers différents cas pratiques.
             </div>
           </div>
           <div className='cvDownload'>
