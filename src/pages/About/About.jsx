@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 function About() {
+  const [showPDF, setShowPDF] = useState(false);
+
+  const handleShowPDF = () => {
+    setShowPDF(true);
+  };
+  const handleClosePDF = () => {
+    setShowPDF(false);
+  };
   return (
     <>
       <main>
@@ -34,14 +42,26 @@ function About() {
           </div>
           <div className='cvDownload'>
             <span className='textColor'>CV</span>
-            <a className='cvDownloadBtn' href='/path/to/cv.pdf' download>
+            <button className='cvDownloadBtn' onClick={handleShowPDF}>
               <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'>
                 <path
                   d='M11.292 16.706a1 1 0 0 0 1.416 0l3-3a1 1 0 0 0-1.414-1.414L13 13.586V4a1 1 0 0 0-2 0v9.586l-1.293-1.293a1 1 0 0 0-1.414 1.414zM17 19H7a1 1 0 0 0 0 2h10a1 1 0 0 0 0-2z'
                   fill='currentColor'
                 />
               </svg>
-            </a>
+            </button>
+            {showPDF && (
+              <div>
+                <iframe
+                  title='CV de Thomas Bruand'
+                  src='/assets/dl/thomas_bruand_cv.pdf'
+                  className='iframeCv'
+                ></iframe>
+                <button className='closeBtnCv' onClick={handleClosePDF}>
+                  Fermer
+                </button>
+              </div>
+            )}
           </div>
         </article>
       </main>
