@@ -23,8 +23,7 @@
     /* light mode */
     --lightPrimary: hsl(227, 64%, 42%);
     --lightPrimaryHi: hsla(227, 64%, 42%, 25%);
-    --lightPrimaryHover: hsl(229, 71%, 44%);
-   
+    --lightPrimaryHover: hsl(229, 71%, 44%);   
 }
 *,
 *:after,
@@ -256,6 +255,19 @@ button{
 .cvDownloadBtn svg {
     width: 80%;
     color: var(--text);
+}
+.iframeCv {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.closeBtnCv {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1000;
 }
 /* fin about */
 /* stacks */    
@@ -583,7 +595,7 @@ input:required, textarea:required {
     align-items: center;
     position: relative;
     border-radius: 4px !important;
-    height: 50px;
+    height: 40px;
     width: 160px;
     z-index: 200;
 }
@@ -595,8 +607,8 @@ input:required, textarea:required {
     gap: 1rem;
 }
 .socialItem {
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -636,7 +648,13 @@ input:required, textarea:required {
       height: 80%;
       overflow: hidden;
       max-width: min(calc(600px + 8rem), calc(100vw - 2rem));
-    }    
+    } 
+    .iframeCv {
+        display: none;
+    }
+    .closeBtnCv {
+        display: none;
+    }   
     #contactForm {
         width: 60%;
     }
@@ -816,7 +834,7 @@ input:required, textarea:required {
     }
     .cvDownload {   
         align-self: center;
-    }
+    }   
     .carouselContainer {
         top: 55%;
     }      
@@ -843,7 +861,7 @@ input:required, textarea:required {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
     }
     .submit{
         position: relative;
@@ -967,8 +985,13 @@ input:required, textarea:required {
 }
 :root:has(#theme:checked) :is(#contactForm input,   
 #contactForm textarea) { 
-    background: var(--textDim);
-    border: 0; 
+    background-color: var(--background);
+    border-color: var(--textDim);
+    color: var(--text);
+}  
+:root:has(#theme:checked) ::placeholder { 
+    color: var(--text);
+    opacity: 0.8;
 }  
 :root:has(#theme:checked) #contactForm .required {  
     font-weight: bold;  
@@ -1000,5 +1023,3 @@ input:required, textarea:required {
 :root:has(#theme:checked) .animate .bar {
     background: transparent;
 }
-
-
