@@ -11,22 +11,49 @@ function Stack() {
               <span>Stacks</span>
             </h2>
             <p>
-              En tant que <span className='textColor'>développeur web</span>{" "}
-              passionné, j'utilise une variété de
-              <span className='textColor'> technologies modernes</span> pour
-              créer des <span className='textColor'>sites web</span> et{" "}
-              <span className='textColor'>applications performantes</span>,{" "}
-              <span className='textColor'>esthétiques</span> et{" "}
-              <span className='textColor'>fonctionnelles</span>. Ma{" "}
-              <span className='textColor'>stack </span> principale est le{" "}
-              <span className='textColor'>langages</span> de programmation{" "}
-              <span className='textColor'>JavaScript</span>, plus
-              particulièrement le{" "}
-              <span className='textColor'>framework React</span>. Mais vous
-              découvrirez ci-dessous mes autres
-              <span className='textColor'> stacks </span>technologiques que
-              j'utilise pour transformer des{" "}
-              <span className='textColor'>idées</span> en
+              En tant que{" "}
+              <span className='textColor'> développeur passionné</span>,
+              j'utilise une variété de
+              <span className='textColor'>
+                {" "}
+                technologies modernes
+              </span> pour{" "}
+              <span className='textColor'> créer des solutions</span>{" "}
+              <span className='textColor'> performantes</span>,
+              <span className='textColor'> esthétiques</span> et{" "}
+              <span className='textColor'> fonctionnelles</span>. Ma{" "}
+              <span className='textColor'> stack</span> principale inclut le
+              langage de programmation{" "}
+              <span className='textColor'> Python</span>, que j'utilise
+              principalement pour le{" "}
+              <span className='textColor'> développement web</span>, l'
+              <span className='textColor'> analyse de données</span> et l'
+              <span className='textColor'> intelligence artificielle</span>. Ce
+              langage <span className='textColor'> polyvalent</span> me permet
+              de <span className='textColor'> construire</span> des applications{" "}
+              <span className='textColor'> robustes</span> et d'
+              <span className='textColor'> exploiter</span> tout le{" "}
+              <span className='textColor'> potentiel</span> de l'
+              <span className='textColor'> IA </span>
+              pour <span className='textColor'> résoudre</span> des{" "}
+              <span className='textColor'> problèmes complexes</span>. En
+              parallèle, je reste
+              <span className='textColor'> actif</span> dans l'
+              <span className='textColor'> écosystème</span> du{" "}
+              <span className='textColor'> développement web</span> avec{" "}
+              <span className='textColor'> JavaScript</span> et le framework{" "}
+              <span className='textColor'> React</span> pour{" "}
+              <span className='textColor'> créer</span> des{" "}
+              <span className='textColor'> interfaces utilisateur</span>
+              <span className='textColor'> interactives </span>
+              et <span className='textColor'> réactives</span>. Vous trouverez
+              ci-dessous les autres{" "}
+              <span className='textColor'> technologies</span>
+              que j'utilise pour <span className='textColor'>
+                {" "}
+                transformer
+              </span>{" "}
+              des <span className='textColor'> idées</span> en{" "}
               <span className='textColor'> réalités numériques</span>.
             </p>
           </div>
@@ -131,18 +158,67 @@ function Stack() {
                   <div className='item'>
                     <div className='itemIcon'>
                       <svg
+                        version='1.1'
                         xmlns='http://www.w3.org/2000/svg'
                         x='0px'
                         y='0px'
                         width='24'
                         height='24'
-                        viewBox='0 0 64 64'
-                        fill="currentColor"
+                        viewBox='0 0 50 50'
+                        fill='currentColor'
                       >
-                        <path d='M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z'></path>
+                        <rect
+                          x='10'
+                          y='0'
+                          width='20'
+                          height='40'
+                          rx='10'
+                          ry='5'
+                          mask='url(#lines)'
+                        />
+                        <rect
+                          x='0'
+                          y='10'
+                          width='40'
+                          height='20'
+                          rx='5'
+                          ry='10'
+                          mask='url(#lines)'
+                        />
+                        <circle cx='14.5' cy='5' r='1.85' fill='white' />
+                        <circle cx='25.5' cy='35' r='1.85' fill='white' />
+                        <mask id='lines'>
+                          <rect
+                            id='bg'
+                            x='0'
+                            y='0'
+                            width='100%'
+                            height='100%'
+                            fill='white'
+                          />
+                          <line
+                            x1='10'
+                            y1='9.5'
+                            x2='20'
+                            y2='9.5'
+                            stroke='black'
+                          />
+                          <line
+                            x1='20'
+                            y1='30.5'
+                            x2='30'
+                            y2='30.5'
+                            stroke='black'
+                          />
+                          <path
+                            d='m 9.5,30 c 0,-10 2.5,-10 10,-10 8.5,0 11,0 11,-10'
+                            stroke='black'
+                            fill='none'
+                          />
+                        </mask>
                       </svg>
                     </div>
-                    <div className='itemText'>GitHub</div>
+                    <div className='itemText'>Python</div>
                   </div>
                 </li>
                 <li>

@@ -124,7 +124,7 @@ function Contact() {
                   </li>
 
                   <li className='socialItem'>
-                    <Link to={"https://github.com/BruandT"} target="_blank">
+                    <Link to={"https://github.com/Tbruand"} target="_blank">
                       <svg
                         xmlns='http://www.w3.org/2000/svg'
                         x='0px'

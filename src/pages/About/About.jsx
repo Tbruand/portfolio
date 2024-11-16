@@ -21,23 +21,32 @@ function About() {
             <div>
               Hello ! Je m'appelle{" "}
               <span className='textColor'>Thomas Bruand</span>, je suis{" "}
-              <span className='textColor'>développeur Web junior</span>.
+              <span className='textColor'>développeur Web junior</span> et
+              actuellement en formation pour devenir{" "}
+              <span className='textColor'>
+                développeur en intelligence artificielle
+              </span>
+              .
             </div>
             <div>
               Auparavant, j'ai travaillé en tant que{" "}
               <span className='textColor'>technicien maintenance</span> dans le
               domaine de la <span className='textColor'>télécommunication</span>
-              , ce qui m'a permis d'acquérir de très bonnes compétences telles
+              , ce qui m'a permis d'acquérir des compétences essentielles telles
               que l'<span className='textColor'>organisation</span>, l'
               <span className='textColor'>écoute</span>, la
-              <span className='textColor'> réactivité</span>.
+              <span className='textColor'> réactivité</span>. En 2023, j'ai suivi une
+              formation sur <span className='textColor'>OpenClassrooms</span>,
+              plateforme de formation en ligne, ce qui m'a permis d'apprendre
+              différents <span className='textColor'>langages du web</span> et
+              leur utilisation à travers différents cas pratiques.
             </div>
             <div>
-              En 2023, j'ai suivi une formation sur{" "}
-              <span className='textColor'>OpenClassrooms</span>, plateforme de
-              formation en ligne, ce qui m'a permis d'apprendre différents{" "}
-              <span className='textColor'>langages du web</span> et leur
-              utilisation à travers différents cas pratiques.
+              En octobre 2024, j'ai débuté une nouvelle aventure professionnelle
+              avec une formation de développeur en intelligence artificielle au
+              <span className='textColor'> GRETA</span>. À terme, je serai capable de <span className='textColor'> traiter</span> et <span className='textColor'> exploiter</span> des
+              données pour <span className='textColor'> développer</span> des solutions IA <span className='textColor'> innovantes</span> et
+              <span className='textColor'> performantes</span>, <span className='textColor'> adaptées</span> à divers besoins. 
             </div>
           </div>
           <div className='cvDownload'>
@@ -54,7 +63,7 @@ function About() {
               <div>
                 <iframe
                   title='CV de Thomas Bruand'
-                  src='/assets/dl/thomas_bruand_cv.pdf'
+                  src='/assets/dl/CV_Thomas_Bruand.pdf'
                   className='iframeCv'
                 ></iframe>
                 <button className='closeBtnCv' onClick={handleClosePDF}>
